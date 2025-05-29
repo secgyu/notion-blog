@@ -12,9 +12,9 @@ interface DocsPageProps {
 export default async function DocsPage({ params }: DocsPageProps) {
   const { slug } = await params;
 
-  // 1. /docs -> 메인 문서 페이지
-  // 2. /docs/intro -> 단일 경로
-  // 3. /docs/guide/basic -> 다중 경로
+  // 1. /docs -> 메인 문서 페이지 ( slug : 빈배열 )
+  // 2. /docs/intro -> 단일 경로 ( slug : [intro] )
+  // 3. /docs/guide/basic -> 다중 경로 ( slug : [guide, basic] )
 
   if (!slug) {
     return (
